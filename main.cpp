@@ -26,6 +26,7 @@ int main() {
     v.push_back(1);
     v.push_back(2);
     v.push_back(3);
+    v.pop_back();
 
     for(auto i=0; i < v.size(); i++) {
         std::cout << v[i] << std::endl;
@@ -34,6 +35,7 @@ int main() {
     vector<Point> vp;
     vp.emplace_back(1,2,3);
     vp.emplace_back(4,5,6);
+    vp.pop_back();
     for(auto i=0; i < vp.size(); i++) {
         std::cout << "A: " << vp[i].a() << std::endl;
         std::cout << "B: " << vp[i].b() << std::endl;

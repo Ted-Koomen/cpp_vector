@@ -20,6 +20,21 @@ class vector {
 
         auto size() { return m_size; }  
 
+        void pop_back() {
+            if(m_size > 0) {
+                m_size--;
+                m_data[m_size].~T();
+            }
+        }
+
+        void clear() {
+            for(auto i=0; i < m_size; i++){
+                m_data[i].~T();
+            }
+            m_size = 0;
+        }
+
+
         template<typename ... Args>
         void emplace_back(Args&&... args)
         {
